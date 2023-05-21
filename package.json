@@ -1,0 +1,24 @@
+{
+  "name": "typinggame",
+  "version": "1.0.0",
+  "description": "Trying to create a type testing game, with Python and flask or django",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkalman01/TypingGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkalman01/TypingGame/issues"
+  },
+  "homepage": "https://github.com/mkalman01/TypingGame#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.0"
+  }
+}
