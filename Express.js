@@ -58,6 +58,15 @@ app.post('/result', (req, res) => {
     //Handle saving test results to the database
 });
 
-app.length('/leaderboard', (req,res) => {
-
+app.get('/leaderboard', (req,res) => {
+    TestResult.find()
+    .sort({wpm: -1}) //sort by word per minute in descending order
+    .limit(10) //limit the results to be the top 10
+    .exec((err, results) => {
+        if (err) {
+            res.status(500).json({erro: 'Faild to fetch leaderborad data'});
+        } else {
+            res.status(200).json(results);
+        }
+    });
 });

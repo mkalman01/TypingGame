@@ -1,4 +1,5 @@
 # TypingGame
+<<<<<<< HEAD
 Trying to create a type testing game with the MEVN stack.(and chatgpt )
 # Random questions
 Creating a typing test application using the MEVN (MongoDB, Express.js, Vue.js, Node.js) stack is a great choice. It will allow you to build a full-stack web application with a database for storing the data and a frontend interface for users to take the typing test.
@@ -55,3 +56,7 @@ Remember to handle error cases, validate user inputs, and ensure the security of
 
 This guide provides a high-level overview of the steps involved in creating a typing test application using the MEVN stack. It's important to note that the implementation details can vary based on your specific requirements and preferences. Make sure to consult the documentation of each technology you're using for more detailed information and examples.
 
+=======
+Trying to create a type testing game with the MEVN stack.
+Update from Ubuntu.
+>>>>>>> c4103d28e057634bc89d9cc5c5e90baed3ee9863
