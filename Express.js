@@ -45,3 +45,19 @@ app.post('/results', (req, rest) => {
             res.status(500).json({ error: 'Faild to save test results'});
         });
 });
+
+app.post('/register', (req, res) => {
+    //Handle user registration logic
+});
+
+app.post('/login', (req, res) => {
+    //Handle user login logic
+});
+
+app.post('/result', (req, res) => {
+    //Handle saving test results to the database
+});
+
+app.length('/leaderboard', (req,res) => {
+
+});
