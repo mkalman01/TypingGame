@@ -17,10 +17,13 @@ Install the necessary dependencies: npm install express mongoose.
 #I have installed the dependencies - done
 
 Set up Express.js to handle HTTP requests and MongoDB (or any other database) for data storage.
-# How to setup Express.js to handle HTTP requests and MongoDB for data storage? - done
+#How to setup Express.js to handle HTTP requests and MongoDB for data storage? - done
 
 Define the necessary routes for your application, such as handling user authentication, saving test results, and retrieving leaderboard data.
-# How to I setup routes for the application, such as handling user authentication, saving test results, and retri leaderboard data?
+#How to I setup routes for the application, such as handling user authentication, saving test results, and retri leaderboard data?
+#How do I handle user registration logic?
+#How do I handle user login logic?
+#How do I handle saving the test results to the database?
 
 Connect to your MongoDB database using Mongoose and define a schema for storing test results.
 #How to I connect MongoDB database using Mongoose and define a schema for stroing test results?
