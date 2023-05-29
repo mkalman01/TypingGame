@@ -1,5 +1,6 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
+const User = require('./models/User');
 
 const app = express
 
@@ -47,7 +48,7 @@ app.post('/results', (req, rest) => {
 });
 
 app.post('/register', (req, res) => {
-    //Handle user registration logic
+    
 });
 
 app.post('/login', (req, res) => {
