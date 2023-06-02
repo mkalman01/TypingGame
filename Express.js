@@ -48,7 +48,32 @@ app.post('/results', (req, rest) => {
 });
 
 app.post('/register', (req, res) => {
-    
+    const { username, email, password } = req.body
+
+    // Validate user inputs
+
+    //Check if the email is already registered
+    User.findOne({ email: email})
+        .then(existingUser => {
+            if (existingUser) {
+                return res.status(400).json({ error: 'Error is already registered'});
+            }
+
+            // Create a new user instance
+            const newUser = new User({ username, email, password});
+
+            // Save the new user to the database
+            newUser.save()
+                .then(() => {
+                    res.status(200).json({ message :'User registration successful' });
+                })
+                .catch(error => {
+                    res.status(500).json({error: 'Faild to register user'});
+                });
+        })
+        .catch(error => {
+            res.status(500).json({error: 'Faild to check email availability'});
+        });
 });
 
 app.post('/login', (req, res) => {
