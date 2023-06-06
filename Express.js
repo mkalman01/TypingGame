@@ -77,7 +77,28 @@ app.post('/register', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    //Handle user login logic
+    const { email, password} = req.body;
+
+    // Find the user by email
+    User.findOne({email: email})
+    .then(user => {
+        // Check if the user exists
+        if(!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        // Validate the password
+        if (!user.$isValidPassword(password)) {
+            return res.status(401).json({ error: 'Invalid password' });
+        }
+
+        // If the user and password are valid, create a token or session for authentication
+
+        res.status(200).json({ message: 'Login succesful' });
+    })
+    .catch(error => {
+        res.status(500).json({ error: 'Faild to log in' });
+    });
 });
 
 app.post('/result', (req, res) => {
